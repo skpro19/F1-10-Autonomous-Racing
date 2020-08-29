@@ -1,0 +1,8 @@
+prefix=/home/skpro19/catkin_ws/install
+
+Name: ros_playground
+Description: Description of ros_playground
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
