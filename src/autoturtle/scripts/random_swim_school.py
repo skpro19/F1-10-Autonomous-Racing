@@ -5,7 +5,7 @@ from turtlesim.msg import Pose
 
 PI = 3.1415926535897
 
-class ControlTurtlesim:
+class RandomTurtleSwim:
 
 
 
@@ -38,56 +38,8 @@ class ControlTurtlesim:
         
 
         #return [(x0 - self.pose.x) , (y0 - self.pose.y)]
-    
-    
-    def make_eight_1(self):
 
-        vel_msg = Twist()
-        
-        w = 4
-        v = 4
-
-        counter =0 
-
-        x_p = self.pose.x 
-        y_p = self.pose.y
-
-        while not rospy.is_shutdown():
-            
-            rospy.loginfo('Inside the while loop')
-            x_c = self.pose.x 
-            y_c = self.pose.y
-
-               
-            cond = x_p < self.x0 and  x_c > self.x0
-            
-            rospy.loginfo(f'cond : {cond}')
-                
-            if (x_p < self.x0 and  x_c > self.x0) :
-
-                w = -1 * w
-                rospy.loginfo(f'New w : {w}')                
-                rospy.loginfo('************ Changing w ***************')
-
-            rospy.loginfo('Outside the while loop')
-
-            x_p = x_c
-            y_p = y_c
-            
-
-           
-            vel_msg.linear.x =v
-            vel_msg.angular.z=w
-            
-            rospy.loginfo(f'v =  {v}  w = {w}')
-
-            self.vel_pub.publish(vel_msg)
-                
-            rospy.loginfo(f'After the velocity publisher')
-
-            self.rate.sleep()
-
-    def make_eight_2(self):
+    def make_eight(self):
 
         
 
@@ -150,8 +102,7 @@ class ControlTurtlesim:
         self.pose =  Pose()
         self.counter = 0 
         rospy.init_node('ControlTurtlesim', anonymous=False)
-        self.x0 = 5.444
-        self.y0 = 5.444    
+            
         self.rate = rospy.Rate(100)
 
         rospy.loginfo(" Press CTRL+c to stop moving the Turtle")
@@ -178,7 +129,7 @@ if __name__ == '__main__':
     # transferred down to the except block.
 
     try:
-        control_node = ControlTurtlesim()
-        control_node.make_eight_1()
+        control_node = RandomTurtleSwim()
+        #control_node.random_swim()
     except:
         rospy.loginfo("End of the swim for this Turtle.")
