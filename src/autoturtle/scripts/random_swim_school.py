@@ -14,33 +14,7 @@ class ControlTurtlesim:
         self.pose = data
         
     
-    def near_enough(self): 
-        
-        
-        #return True 
-
-
-        x0 = 5.444
-        y0 = 5.444
-        
-        x_del = abs(x0 - self.pose.x)
-        y_del = abs(y0 - self.pose.y)
-    
-
-
-        if (abs(x0 - self.pose.x) < 0.11 and abs(y0 - self.pose.y) < 0.11): 
-           
-            #print('**********************************')
-            return True 
-
-        else:
-            return False
-        
-
-        #return [(x0 - self.pose.x) , (y0 - self.pose.y)]
-    
-    
-    def make_eight_1(self):
+    def make_eight_1(self,x,y):
 
         vel_msg = Twist()
         
@@ -88,14 +62,14 @@ class ControlTurtlesim:
             self.rate.sleep()
 
 
-    def __init__(self):
+    def __init__(self, x, y):
 
 
         self.pose =  Pose()
         self.counter = 0 
         rospy.init_node('ControlTurtlesim', anonymous=False)
-        self.x0 = 5.444
-        self.y0 = 5.444    
+        self.x0 = x
+        self.y0 = y    
         self.rate = rospy.Rate(100)
 
         rospy.loginfo(" Press CTRL+c to stop moving the Turtle")
@@ -139,18 +113,15 @@ class ControlTurtlesim:
 if __name__ == '__main__':
     
     try:
-        control_node = ControlTurtlesim()
-        
-        try: 
-
-            x, y, theta = [float(s) for s in input ('Enter x, y and theta : ').split()]
-        
-        except ValueError:
-            print('Please enter three values!')
-
-        #rospy.loginfo(f'Teleporting to entered values')
-
+        x, y, theta = [float(s) for s in input ('Enter x, y and theta : ').split()]
+      
+    except ValueError:
+       
+        print('Please enter three values!')
+    
+    try:
+        control_node = ControlTurtlesim(x,y)
         control_node.teleport_turtle_client(x, y, theta )
-        control_node.make_eight_1()
+        control_node.make_eight_1(x,y)
     except Exception as e:
         rospy.loginfo(f"Exception: {e}")
