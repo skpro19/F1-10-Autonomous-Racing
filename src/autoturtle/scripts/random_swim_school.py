@@ -2,12 +2,12 @@
 import rospy
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
+from turtlesim.srv import *
+
 
 PI = 3.1415926535897
 
-class RandomTurtleSwim:
-
-
+class ControlTurtlesim:
 
     def get_pose(self, data):
 
@@ -38,63 +38,55 @@ class RandomTurtleSwim:
         
 
         #return [(x0 - self.pose.x) , (y0 - self.pose.y)]
+    
+    
+    def make_eight_1(self):
 
-    def make_eight(self):
-
-        
-
-        #t0 = rospy.Time.now().to_sec()
-
-        #ang_speed = 0.1
-
-        #curr_ang = 0 
-        
         vel_msg = Twist()
-
-        v  = 1.4
-
-        w = 1
         
-        r = v / w 
+        w = 4
+        v = 4
 
-        vel_msg.linear.x = v
-        
-        t0 = rospy.Time.now().to_sec()
+        counter =0 
+
+        x_p = self.pose.x 
+        y_p = self.pose.y
 
         while not rospy.is_shutdown():
+            
+            rospy.loginfo('Inside the while loop')
+            x_c = self.pose.x 
+            y_c = self.pose.y
+
+               
+            cond = x_p < self.x0 and  x_c > self.x0
+            
+            rospy.loginfo(f'cond : {cond}')
+                
+            if (x_p < self.x0 and  x_c > self.x0) :
+
+                w = -1 * w
+                rospy.loginfo(f'New w : {w}')                
+                rospy.loginfo('************ Changing w ***************')
+
+            rospy.loginfo('Outside the while loop')
+
+            x_p = x_c
+            y_p = y_c
+            
+
            
-
-            if self.near_enough(): 
-                
-                rospy.loginfo('Near enoguh triggered')
-
-                t1 = rospy.Time.now().to_sec()
-
-                del_t = t1 - t0 
-                
-                #rospy.loginfo(f'del_t * v : {del_t * v}')
-                #rospy.loginfo_once('2 * PI * r : {2 * PI * r}')
-
-                del_dis = abs(del_t * v  - 2 * PI * r)
-                
-                #rospy.loginfo(f'del_dis : {del_dis}')
-
-                if abs(del_t * v - 2 * PI * r) < 0.2 : 
-                    
-                    rospy.loginfo(f'del_t : {del_t} del_dis : {del_dis}')
-                    t0 = t1 
-                    w=  -w 
-                    rospy.loginfo('*********************Changing w ****************************')
-
+            vel_msg.linear.x =v
+            vel_msg.angular.z=w
             
-            
-            vel_msg.angular.z = w
-            
-        
+            rospy.loginfo(f'v =  {v}  w = {w}')
+
             self.vel_pub.publish(vel_msg)
+                
+            rospy.loginfo(f'After the velocity publisher')
 
             self.rate.sleep()
-        
+
 
     def __init__(self):
 
@@ -102,7 +94,8 @@ class RandomTurtleSwim:
         self.pose =  Pose()
         self.counter = 0 
         rospy.init_node('ControlTurtlesim', anonymous=False)
-            
+        self.x0 = 5.444
+        self.y0 = 5.444    
         self.rate = rospy.Rate(100)
 
         rospy.loginfo(" Press CTRL+c to stop moving the Turtle")
@@ -118,18 +111,46 @@ class RandomTurtleSwim:
     def shutdown(self):
         rospy.loginfo("Stopping the turtle")
         rospy.sleep(1)
+ 
+        
+
+    def teleport_turtle_client(self, x , y, theta): 
+        
+        rospy.loginfo('Inside teleport_turtle_client function')
+
+        rospy.wait_for_service('/turtle1/teleport_absolute')
+
+        try: 
+            
+            rospy.loginfo('Inside the try block')
+
+            teleport_turtle = rospy.ServiceProxy('/turtle1/teleport_absolute', TeleportAbsolute)
+
+            resp1 = teleport_turtle(x, y, theta)
     
+            rospy.loginfo('resp1 : {resp1}')
+            
+            return resp1
 
-
+        except rospy.ServiceException as e: 
+            rospy.loginfo('Service call failed')
 
 
 if __name__ == '__main__':
-    # Try and Except.
-    # If an error is encountered, a try block code execution is stopped and
-    # transferred down to the except block.
-
+    
     try:
-        control_node = RandomTurtleSwim()
-        #control_node.random_swim()
-    except:
-        rospy.loginfo("End of the swim for this Turtle.")
+        control_node = ControlTurtlesim()
+        
+        try: 
+
+            x, y, theta = [float(s) for s in input ('Enter x, y and theta : ').split()]
+        
+        except ValueError:
+            print('Please enter three values!')
+
+        #rospy.loginfo(f'Teleporting to entered values')
+
+        control_node.teleport_turtle_client(x, y, theta )
+        control_node.make_eight_1()
+    except Exception as e:
+        rospy.loginfo(f"Exception: {e}")
