@@ -155,46 +155,6 @@ class ControlTurtlesim:
             #self.rate.sleep()
 
 
-    def move_fwd(self, length): 
-       
-        rospy.loginfo('Inside move_fwd function')
-
-        v = 0.1
-        
-        p_theta = self.pose.theta
-
-        v_x = v * math.cos(p_theta)
-        v_y = v * math.sin(p_theta)
-        
-        vel_msg = Twist()
-
-        vel_msg.linear.x = v_x
-        vel_msg.linear.y = v_y
-        
-        #rospy.loginfo(f'Setting v_x : {v_x} and v_y : {v_y}')
-
-        
-        dis = 0 
-
-        rospy.loginfo(f'dis : {dis}')
-
-        while not rospy.is_shutdown():
-
-            if dis >= length:
-                break; 
-            
-            self.vel_pub.publish(vel_msg)
-            
-
-            dis = dis + v
-            
-            self.rate.sleep()
-            
-
-        
-            rospy.loginfo(f'new_dis : {dis}')
-            
-            rospy.loginfo(f'v_x : {v_x} v_y : {v_y}')            
 
     
 
