@@ -166,12 +166,6 @@ class ControlTurtlesim:
         self.pose =  Pose()
         rospy.init_node('ControlTurtlesim', anonymous=False)
         
-       
-        
-
-        rospy.set_param('/background_b',random.randint(0,255))
-        rospy.set_param('/background_g',random.randint(0,255))
-        rospy.set_param('/background_r',random.randint(0,255))
 
         self.pub_rate = 100
 
