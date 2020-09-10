@@ -453,21 +453,6 @@ autoturtle_generate_messages_nodejs/fast:
 .PHONY : autoturtle_generate_messages_nodejs/fast
 
 # Convenience name for target.
-autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/rule:
-	cd /home/skpro19/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/rule
-.PHONY : autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/rule
-
-# Convenience name for target.
-_autoturtle_generate_messages_check_deps_TeleportTurtle: autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/rule
-
-.PHONY : _autoturtle_generate_messages_check_deps_TeleportTurtle
-
-# fast build rule for target.
-_autoturtle_generate_messages_check_deps_TeleportTurtle/fast:
-	cd /home/skpro19/catkin_ws/build && $(MAKE) -f autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/build.make autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/build
-.PHONY : _autoturtle_generate_messages_check_deps_TeleportTurtle/fast
-
-# Convenience name for target.
 autoturtle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/skpro19/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 autoturtle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : autoturtle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -618,7 +603,6 @@ help:
 	@echo "... autoturtle_genpy"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... autoturtle_generate_messages_nodejs"
-	@echo "... _autoturtle_generate_messages_check_deps_TeleportTurtle"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"

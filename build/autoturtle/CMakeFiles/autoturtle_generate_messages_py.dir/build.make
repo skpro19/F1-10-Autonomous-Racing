@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/skpro19/catkin_ws/build
 include autoturtle/CMakeFiles/autoturtle_generate_messages_py.dir/progress.make
 
 autoturtle/CMakeFiles/autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_AddTwoInts.py
-autoturtle/CMakeFiles/autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_TeleportTurtle.py
 autoturtle/CMakeFiles/autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/__init__.py
 
 
@@ -63,20 +62,13 @@ autoturtle/CMakeFiles/autoturtle_generate_messages_py: /home/skpro19/catkin_ws/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV autoturtle/AddTwoInts"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv
 
-/home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_TeleportTurtle.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-/home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_TeleportTurtle.py: /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV autoturtle/TeleportTurtle"
-	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv
-
 /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/__init__.py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_AddTwoInts.py
-/home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/__init__.py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_TeleportTurtle.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for autoturtle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for autoturtle"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv --initpy
 
 autoturtle_generate_messages_py: autoturtle/CMakeFiles/autoturtle_generate_messages_py
 autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_AddTwoInts.py
-autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/_TeleportTurtle.py
 autoturtle_generate_messages_py: /home/skpro19/catkin_ws/devel/lib/python2.7/dist-packages/autoturtle/srv/__init__.py
 autoturtle_generate_messages_py: autoturtle/CMakeFiles/autoturtle_generate_messages_py.dir/build.make
 

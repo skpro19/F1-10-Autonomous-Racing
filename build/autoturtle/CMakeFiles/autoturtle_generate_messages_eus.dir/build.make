@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/skpro19/catkin_ws/build
 include autoturtle/CMakeFiles/autoturtle_generate_messages_eus.dir/progress.make
 
 autoturtle/CMakeFiles/autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/AddTwoInts.l
-autoturtle/CMakeFiles/autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/TeleportTurtle.l
 autoturtle/CMakeFiles/autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/manifest.l
 
 
@@ -63,18 +62,12 @@ autoturtle/CMakeFiles/autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from autoturtle/AddTwoInts.srv"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv
 
-/home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/TeleportTurtle.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-/home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/TeleportTurtle.l: /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from autoturtle/TeleportTurtle.srv"
-	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv
-
 /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for autoturtle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for autoturtle"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle autoturtle std_msgs
 
 autoturtle_generate_messages_eus: autoturtle/CMakeFiles/autoturtle_generate_messages_eus
 autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/AddTwoInts.l
-autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/srv/TeleportTurtle.l
 autoturtle_generate_messages_eus: /home/skpro19/catkin_ws/devel/share/roseus/ros/autoturtle/manifest.l
 autoturtle_generate_messages_eus: autoturtle/CMakeFiles/autoturtle_generate_messages_eus.dir/build.make
 

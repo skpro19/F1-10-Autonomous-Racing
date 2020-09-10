@@ -38,10 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoturtle/srv" TYPE FILE FILES
-    "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
-    "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
-    )
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autoturtle/srv" TYPE FILE FILES "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/skpro19/catkin_ws/build
 include autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs.dir/progress.make
 
 autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs: /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/AddTwoInts.js
-autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs: /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/TeleportTurtle.js
 
 
 /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/AddTwoInts.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
@@ -62,14 +61,8 @@ autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs: /home/skpro19/catkin_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from autoturtle/AddTwoInts.srv"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv
 
-/home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/TeleportTurtle.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/TeleportTurtle.js: /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from autoturtle/TeleportTurtle.srv"
-	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv
-
 autoturtle_generate_messages_nodejs: autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs
 autoturtle_generate_messages_nodejs: /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/AddTwoInts.js
-autoturtle_generate_messages_nodejs: /home/skpro19/catkin_ws/devel/share/gennodejs/ros/autoturtle/srv/TeleportTurtle.js
 autoturtle_generate_messages_nodejs: autoturtle/CMakeFiles/autoturtle_generate_messages_nodejs.dir/build.make
 
 .PHONY : autoturtle_generate_messages_nodejs

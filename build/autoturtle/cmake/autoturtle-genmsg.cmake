@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "autoturtle: 0 messages, 2 services")
+message(STATUS "autoturtle: 0 messages, 1 services")
 
 set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -22,11 +22,6 @@ add_custom_target(_autoturtle_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "autoturtle" "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" ""
 )
 
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
-add_custom_target(_autoturtle_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "autoturtle" "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" ""
-)
-
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -37,12 +32,6 @@ add_custom_target(_autoturtle_generate_messages_check_deps_${_filename}
 ### Generating Services
 _generate_srv_cpp(autoturtle
   "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/autoturtle
-)
-_generate_srv_cpp(autoturtle
-  "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/autoturtle
@@ -62,8 +51,6 @@ add_dependencies(autoturtle_generate_messages autoturtle_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(autoturtle_generate_messages_cpp _autoturtle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
-add_dependencies(autoturtle_generate_messages_cpp _autoturtle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(autoturtle_gencpp)
@@ -78,12 +65,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoturtle_generate_messages_cpp)
 ### Generating Services
 _generate_srv_eus(autoturtle
   "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/autoturtle
-)
-_generate_srv_eus(autoturtle
-  "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/autoturtle
@@ -103,8 +84,6 @@ add_dependencies(autoturtle_generate_messages autoturtle_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(autoturtle_generate_messages_eus _autoturtle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
-add_dependencies(autoturtle_generate_messages_eus _autoturtle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(autoturtle_geneus)
@@ -119,12 +98,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoturtle_generate_messages_eus)
 ### Generating Services
 _generate_srv_lisp(autoturtle
   "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/autoturtle
-)
-_generate_srv_lisp(autoturtle
-  "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/autoturtle
@@ -144,8 +117,6 @@ add_dependencies(autoturtle_generate_messages autoturtle_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(autoturtle_generate_messages_lisp _autoturtle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
-add_dependencies(autoturtle_generate_messages_lisp _autoturtle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(autoturtle_genlisp)
@@ -160,12 +131,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS autoturtle_generate_messages_lisp)
 ### Generating Services
 _generate_srv_nodejs(autoturtle
   "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/autoturtle
-)
-_generate_srv_nodejs(autoturtle
-  "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/autoturtle
@@ -185,8 +150,6 @@ add_dependencies(autoturtle_generate_messages autoturtle_generate_messages_nodej
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(autoturtle_generate_messages_nodejs _autoturtle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
-add_dependencies(autoturtle_generate_messages_nodejs _autoturtle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(autoturtle_gennodejs)
@@ -205,12 +168,6 @@ _generate_srv_py(autoturtle
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/autoturtle
 )
-_generate_srv_py(autoturtle
-  "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/autoturtle
-)
 
 ### Generating Module File
 _generate_module_py(autoturtle
@@ -225,8 +182,6 @@ add_dependencies(autoturtle_generate_messages autoturtle_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv" NAME_WE)
-add_dependencies(autoturtle_generate_messages_py _autoturtle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv" NAME_WE)
 add_dependencies(autoturtle_generate_messages_py _autoturtle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

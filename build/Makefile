@@ -532,19 +532,6 @@ autoturtle_generate_messages_nodejs/fast:
 .PHONY : autoturtle_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _autoturtle_generate_messages_check_deps_TeleportTurtle
-
-# Build rule for target.
-_autoturtle_generate_messages_check_deps_TeleportTurtle: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _autoturtle_generate_messages_check_deps_TeleportTurtle
-.PHONY : _autoturtle_generate_messages_check_deps_TeleportTurtle
-
-# fast build rule for target.
-_autoturtle_generate_messages_check_deps_TeleportTurtle/fast:
-	$(MAKE) -f autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/build.make autoturtle/CMakeFiles/_autoturtle_generate_messages_check_deps_TeleportTurtle.dir/build
-.PHONY : _autoturtle_generate_messages_check_deps_TeleportTurtle/fast
-
-#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -689,7 +676,6 @@ help:
 	@echo "... autoturtle_genpy"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... autoturtle_generate_messages_nodejs"
-	@echo "... _autoturtle_generate_messages_check_deps_TeleportTurtle"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"

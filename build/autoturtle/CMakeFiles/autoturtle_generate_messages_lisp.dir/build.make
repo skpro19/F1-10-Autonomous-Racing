@@ -54,7 +54,6 @@ CMAKE_BINARY_DIR = /home/skpro19/catkin_ws/build
 include autoturtle/CMakeFiles/autoturtle_generate_messages_lisp.dir/progress.make
 
 autoturtle/CMakeFiles/autoturtle_generate_messages_lisp: /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/AddTwoInts.lisp
-autoturtle/CMakeFiles/autoturtle_generate_messages_lisp: /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/TeleportTurtle.lisp
 
 
 /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/AddTwoInts.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
@@ -62,14 +61,8 @@ autoturtle/CMakeFiles/autoturtle_generate_messages_lisp: /home/skpro19/catkin_ws
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from autoturtle/AddTwoInts.srv"
 	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv
 
-/home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/TeleportTurtle.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/TeleportTurtle.lisp: /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from autoturtle/TeleportTurtle.srv"
-	cd /home/skpro19/catkin_ws/build/autoturtle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p autoturtle -o /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv
-
 autoturtle_generate_messages_lisp: autoturtle/CMakeFiles/autoturtle_generate_messages_lisp
 autoturtle_generate_messages_lisp: /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/AddTwoInts.lisp
-autoturtle_generate_messages_lisp: /home/skpro19/catkin_ws/devel/share/common-lisp/ros/autoturtle/srv/TeleportTurtle.lisp
 autoturtle_generate_messages_lisp: autoturtle/CMakeFiles/autoturtle_generate_messages_lisp.dir/build.make
 
 .PHONY : autoturtle_generate_messages_lisp

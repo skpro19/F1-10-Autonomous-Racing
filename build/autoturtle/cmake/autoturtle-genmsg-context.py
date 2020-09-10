@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv;/home/skpro19/catkin_ws/src/autoturtle/srv/TeleportTurtle.srv"
+services_str = "/home/skpro19/catkin_ws/src/autoturtle/srv/AddTwoInts.srv"
 pkg_name = "autoturtle"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
